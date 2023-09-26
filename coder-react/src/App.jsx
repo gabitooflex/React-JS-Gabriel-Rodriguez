@@ -1,48 +1,24 @@
-import './App.css'
-import NavBar from './components/navbar';
-import ItemListContainer from './components/ItemListContainer';
-import Card from './components/Card';    
+import "./App.css";
+import NavBar from "./components/Navbar";
+import { Route, Routes} from "react-router-dom";
+import Contact from "./pages/Contact";
+import Home from './pages/Home';
+import Store from './pages/Store';
+import Details from "./pages/details";
 
 
 function App() {
-  
   return (
-    <div className='Container'>
-    <NavBar/>
-      <div style={{display:"flex", alignItems: "Center", justifyContent: "center"}}>
-        <ItemListContainer greeting= "Bienvenido a LEX"/>
-      </div>
-      <div className='container'>
-      <h2 style={{paddingBottom:"50px", paddingTop:"40px"}}>Remeras Oversize</h2>
-      <div className="row">
-        <div className="col-3">
-          <Card 
-            title="Remera Oversize Blanca"
-            description="Blanca lisa | Oversize | Hombre"
-            img="https://img.lojasrenner.com.br/item/734467662/large/3.jpg"
-          />
-        </div>
-        <div className="col-3">
-          <Card title="Remera Oversize Negra" 
-          description="Negra lisa | Oversize | Hombre"
-          img="https://img.lojasrenner.com.br/item/734467582/large/3.jpg" />
-        </div>
-        <div className="col-3">
-          <Card title="Remera Oversize Marron" description="Marron lisa | Oversize | Hombre"  img="https://img.lojasrenner.com.br/item/834055614/large/3.jpg"/>
-        </div>
-        <div className="col-3">
-          <Card 
-            title="Remera Oversize Violeta"
-            description="Violeta Semi Lisa | Oversize | Hombre"
-            img="https://img.lojasrenner.com.br/item/660045212/large/3.jpg"
-          />
-        </div>
-      </div>
-
-     
+    <div className="Container">
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/store" element={<Store/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/details/:id" element={<Details />} />
+      </Routes>
     </div>
-    </div>
-  )
+  );
 }
 
-export default App
+export default App;
