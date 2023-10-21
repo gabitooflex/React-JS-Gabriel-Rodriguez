@@ -3,3 +3,23 @@
     align-items: center;
     justify-content: center;
 }
+.heroContact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+.heroContact h5{
+    margin: 16px;
+}
+footer{
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+}
+.CartScreen{
+    min-height: 600px;
+}

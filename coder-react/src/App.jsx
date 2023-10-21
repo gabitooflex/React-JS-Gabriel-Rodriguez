@@ -1,22 +1,20 @@
+import { useState } from "react";
 import "./App.css";
-import NavBar from "./components/Navbar";
-import { Route, Routes} from "react-router-dom";
-import Contact from "./pages/Contact";
-import Home from './pages/Home';
-import Store from './pages/Store';
-import Details from "./pages/details";
+import NavBar from "./components/NavBar/Navbar";
+import RoutesComponent from "./components/Routes/RoutesComponent";
+import CartContextProvider from "./components/Context/CartContextProvider";
+import Footer from "./components/Footer/Footer";
 
 
-function App() {
+function App  () {
   return (
+    
     <div className="Container">
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/store" element={<Store/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/details/:id" element={<Details />} />
-      </Routes>
+      <CartContextProvider>
+        <NavBar/>
+        <RoutesComponent/>
+        <Footer/>
+      </CartContextProvider>
     </div>
   );
 }

@@ -1,8 +1,12 @@
 {
   "dependencies": {
     "bootstrap": "^5.3.1",
+    "firebase": "^10.5.0",
+    "prop-types": "^15.8.1",
+    "react-hook-form": "^7.47.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
-    "reactstrap": "^9.2.0"
+    "reactstrap": "^9.2.0",
+    "sweetalert2": "^11.7.32"
   }
 }
